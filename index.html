@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Emotion Detective Academy</title>
+    
+    <!-- External Libraries -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particles" id="particles"></div>
+        <div class="neural-network" id="neuralNetwork"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>AI Detective Academy</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#analyzer" class="nav-link" data-section="analyzer">AI Analyzer</a>
+                <a href="#learn" class="nav-link" data-section="learn">Learn</a>
+                <a href="#playground" class="nav-link" data-section="playground">Playground</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">AI Emotion</span>
+                        <span class="hero-highlight">Detective Academy</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Master the art of Sentiment Analysis using cutting-edge AI algorithms
+                    </p>
+                    <div class="hero-badges">
+                        <span class="badge badge-ai">
+                            <i class="fas fa-robot"></i> AI Powered
+                        </span>
+                        <span class="badge badge-learn">
+                            <i class="fas fa-graduation-cap"></i> Educational
+                        </span>
+                        <span class="badge badge-interactive">
+                            <i class="fas fa-hand-pointer"></i> Interactive
+                        </span>
+                    </div>
+                    <button class="cta-button" onclick="showSection('analyzer')">
+                        <i class="fas fa-rocket"></i>
+                        Start Your Journey
+                    </button>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="ai-brain">
+                        <div class="brain-core"></div>
+                        <div class="neural-connections"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Multiple AI Algorithms</h3>
+                    <p>Experience different sentiment analysis approaches from basic lexicon to advanced ensemble methods</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Visualization</h3>
+                    <p>See emotions come to life with interactive charts, word clouds, and dynamic animations</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Interactive Learning</h3>
+                    <p>Learn through stories, games, and hands-on exercises designed for 6th grade students</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANALYZER SECTION -->
+        <section id="analyzer" class="section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-microscope"></i>
+                    AI Sentiment Analysis Lab
+                </h2>
+                <p>Choose your AI algorithm and analyze text emotions like a professional data scientist!</p>
+            </div>
+
+            <!-- Algorithm Selection -->
+            <div class="algorithm-selection">
+                <h3>Choose Your AI Detective Method:</h3>
+                <div class="algorithm-grid">
+                    <div class="algorithm-card active" data-algorithm="basic">
+                        <div class="algorithm-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h4>Basic Lexicon</h4>
+                        <p>Perfect for beginners - uses word lists to detect emotions</p>
+                        <div class="algorithm-stats">
+                            <span>Speed: Fast</span>
+                            <span>Accuracy: Good</span>
+                        </div>
+                    </div>
+
+                    <div class="algorithm-card" data-algorithm="advanced">
+                        <div class="algorithm-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Pattern Recognition</h4>
+                        <p>Analyzes sentence patterns and linguistic structures</p>
+                        <div class="algorithm-stats">
+                            <span>Speed: Medium</span>
+                            <span>Accuracy: Better</span>
+                        </div>
+                    </div>
+
+                    <div class="algorithm-card" data-algorithm="neural">
+                        <div class="algorithm-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Neural Network</h4>
+                        <p>Advanced AI that learns from patterns and context</p>
+                        <div class="algorithm-stats">
+                            <span>Speed: Slower</span>
+                            <span>Accuracy: Best</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Input Area -->
+            <div class="analysis-panel">
+                <div class="input-container">
+                    <label for="textInput">Enter your text to analyze:</label>
+                    <textarea 
+                        id="textInput" 
+                        class="smart-input" 
+                        placeholder="Type or paste your text here... Try movie reviews, social media posts, or any text you're curious about!"
+                        rows="6"
+                    ></textarea>
+                    
+                    <div class="input-actions">
+                        <button class="analyze-btn" id="analyzeBtn">
+                            <i class="fas fa-play"></i>
+                            Analyze Emotions
+                        </button>
+                        <button class="sample-btn" onclick="loadSample()">
+                            <i class="fas fa-magic"></i>
+                            Try Sample Text
+                        </button>
+                        <button class="clear-btn" onclick="clearInput()">
+                            <i class="fas fa-eraser"></i>
+                            Clear
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Real-time Preview -->
+                <div class="realtime-preview" id="realtimePreview">
+                    <h4><i class="fas fa-eye"></i> Live Preview</h4>
+                    <div class="preview-content" id="previewContent">
+                        Start typing to see real-time analysis...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Dashboard -->
+            <div class="results-dashboard" id="resultsDashboard">
+                <div class="loading-animation" id="loadingAnimation">
+                    <div class="ai-thinking">
+                        <div class="thinking-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <p>AI is analyzing your text...</p>
+                    </div>
+                </div>
+
+                <div class="results-content" id="resultsContent">
+                    <!-- Primary Result -->
+                    <div class="result-main">
+                        <div class="sentiment-display" id="sentimentDisplay">
+                            <div class="sentiment-emoji" id="sentimentEmoji">🤔</div>
+                            <div class="sentiment-label" id="sentimentLabel">Neutral</div>
+                            <div class="confidence-bar">
+                                <div class="confidence-fill" id="confidenceFill"></div>
+                            </div>
+                            <div class="confidence-text" id="confidenceText">Confidence: 0%</div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Analysis -->
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h4><i class="fas fa-chart-pie"></i> Emotion Breakdown</h4>
+                            <canvas id="emotionChart" width="260" height="260"></canvas>
+                            <div class="emotion-legend">
+                                
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h4><i class="fas fa-cloud"></i> Word Analysis</h4>
+                            <div class="word-cloud" id="wordCloud">
+                                <div class="no-words">No emotional words detected</div>
+                            </div>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h4><i class="fas fa-tachometer-alt"></i> Metrics</h4>
+                            <div class="metrics-grid">
+                                <div class="metric">
+                                    <div class="metric-value" id="intensityScore">0.0</div>
+                                    <div class="metric-label">Intensity</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value" id="polarityScore">0.0</div>
+                                    <div class="metric-label">Polarity</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analysis-card full-width">
+                            <h4><i class="fas fa-lightbulb"></i> AI Explanation</h4>
+                            <div class="explanation-text" id="explanationText">
+                                Run an analysis to see detailed explanations...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEARN SECTION -->
+        <section id="learn" class="section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-graduation-cap"></i>
+                    Learn Sentiment Analysis
+                </h2>
+                <p>Discover the fascinating world of AI emotion detection through interactive stories and exercises!</p>
+            </div>
+
+            <div class="learning-path">
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-number">01</div>
+                        <h3>What is Sentiment Analysis?</h3>
+                    </div>
+                    <div class="story-content">
+                        <div class="character-intro">
+                            <div class="character detective-senti">
+                                <div class="character-avatar">🕵️‍♀️</div>
+                                <div class="character-name">Detective Senti</div>
+                            </div>
+                            <div class="speech-bubble">
+                                "Hello there, future AI detective! I'm Detective Senti, and I solve mysteries by understanding emotions in text. Want to learn my secrets?"
+                            </div>
+                        </div>
+                        
+                        <div class="story-text">
+                            <p>Imagine you could read people's minds and know exactly how they feel just by looking at what they write. That's what sentiment analysis does!</p>
+                            
+                            <p>Every day, people write millions of messages, reviews, and posts online. Some are happy 😊, some are sad 😢, and some are just sharing facts 📝. Our job as emotion detectives is to figure out which is which!</p>
+                        </div>
+
+                        <div class="interactive-example">
+                            <h4>Try This:</h4>
+                            <div class="example-cards">
+                                <div class="example-card positive" onclick="showExplanation('positive')">
+                                    <div class="example-text">"I love this amazing ice cream!"</div>
+                                    <div class="example-emotion">Click to reveal emotion!</div>
+                                </div>
+                                <div class="example-card negative" onclick="showExplanation('negative')">
+                                    <div class="example-text">"This movie is terrible and boring."</div>
+                                    <div class="example-emotion">Click to reveal emotion!</div>
+                                </div>
+                                <div class="example-card neutral" onclick="showExplanation('neutral')">
+                                    <div class="example-text">"The library opens at 9 AM."</div>
+                                    <div class="example-emotion">Click to reveal emotion!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-number">02</div>
+                        <h3>How Does AI Understand Emotions?</h3>
+                    </div>
+                    <div class="story-content">
+                        <div class="character-intro">
+                            <div class="character detective-ana">
+                                <div class="character-avatar">🤖</div>
+                                <div class="character-name">AI Assistant Ana</div>
+                            </div>
+                            <div class="speech-bubble">
+                                "Great question! Let me show you the three main ways AI detects emotions in text."
+                            </div>
+                        </div>
+
+                        <div class="ai-methods">
+                            <div class="method-card">
+                                <div class="method-icon">📚</div>
+                                <h4>Method 1: Word Lists (Lexicon)</h4>
+                                <p>AI has lists of happy words and sad words. It counts them up!</p>
+                                <div class="method-example">
+                                    Happy words: love, amazing, wonderful<br>
+                                    Sad words: hate, terrible, awful
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <div class="method-icon">🔍</div>
+                                <h4>Method 2: Pattern Detection</h4>
+                                <p>AI looks for clues like !!! (excitement) or 😢 (sadness)</p>
+                                <div class="method-example">
+                                    "WOW!!!" = Very excited<br>
+                                    "why me... 😭" = Very sad
+                                </div>
+                            </div>
+
+                            <div class="method-card">
+                                <div class="method-icon">🧠</div>
+                                <h4>Method 3: Machine Learning</h4>
+                                <p>AI learns from millions of examples to understand context</p>
+                                <div class="method-example">
+                                    Learns that "sick" can mean "cool" or "ill"<br>
+                                    based on the context!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-number">03</div>
+                        <h3>Practice Exercises</h3>
+                    </div>
+                    <div class="story-content">
+                        <div class="exercise-container">
+                            <h4>Detective Training: Guess the Emotion!</h4>
+                            <div class="exercise-grid" id="exerciseGrid">
+                                <!-- Exercises will be loaded here -->
+                            </div>
+                            <div class="exercise-score">
+                                Score: <span id="exerciseScore">0</span>/10
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLAYGROUND SECTION -->
+        <section id="playground" class="section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-gamepad"></i>
+                    AI Playground
+                </h2>
+                <p>Experiment, play, and discover with advanced sentiment analysis tools!</p>
+            </div>
+
+            <div class="playground-tools">
+                <div class="tool-card">
+                    <h3><i class="fas fa-random"></i> Emotion Generator</h3>
+                    <p>Generate random sentences and guess their emotions!</p>
+                    <button class="tool-btn" onclick="generateRandomSentence()">Generate Sentence</button>
+                    <div id="generatedSentence" class="generated-content"></div>
+                </div>
+
+                <div class="tool-card">
+                    <h3><i class="fas fa-balance-scale"></i> Emotion Mixer</h3>
+                    <p>Mix different emotions and see what happens!</p>
+                    <div class="emotion-sliders">
+                        <label>😊 Happiness: <input type="range" id="happinessSlider" min="0" max="100" value="50"></label>
+                        <label>😢 Sadness: <input type="range" id="sadnessSlider" min="0" max="100" value="25"></label>
+                        <label>😠 Anger: <input type="range" id="angerSlider" min="0" max="100" value="25"></label>
+                    </div>
+                    <div id="mixedEmotion" class="mixed-result"></div>
+                </div>
+
+                <div class="tool-card">
+                    <h3><i class="fas fa-trophy"></i> Challenge Mode</h3>
+                    <p>Test your emotion detection skills!</p>
+                    <button class="tool-btn" onclick="startChallenge()">Start Challenge</button>
+                    <div id="challengeContent" class="challenge-area"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="js/algorithms.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

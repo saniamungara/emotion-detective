@@ -1,0 +1,521 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Comprehensive emotion lexicon for sentiment analysis education",
+    "categories": ["positive", "negative", "intensifiers", "diminishers", "negators"],
+    "lastUpdated": "2024-08-22"
+  },
+  
+  "positive_emotions": {
+    "joy": {
+      "words": {
+        "happy": 0.7,
+        "joyful": 0.8,
+        "delighted": 0.8,
+        "cheerful": 0.6,
+        "ecstatic": 1.0,
+        "elated": 0.9,
+        "thrilled": 0.9,
+        "excited": 0.7,
+        "euphoric": 1.0,
+        "overjoyed": 0.9,
+        "jubilant": 0.8,
+        "exuberant": 0.8
+      }
+    },
+    
+    "love": {
+      "words": {
+        "love": 0.8,
+        "adore": 0.9,
+        "cherish": 0.7,
+        "treasure": 0.7,
+        "devotion": 0.8,
+        "affection": 0.6,
+        "fondness": 0.5,
+        "passion": 0.8,
+        "romance": 0.7,
+        "caring": 0.6
+      }
+    },
+    
+    "admiration": {
+      "words": {
+        "amazing": 0.9,
+        "awesome": 0.9,
+        "incredible": 0.9,
+        "fantastic": 0.9,
+        "wonderful": 0.8,
+        "marvelous": 0.8,
+        "spectacular": 0.9,
+        "magnificent": 0.8,
+        "brilliant": 0.9,
+        "outstanding": 0.9,
+        "exceptional": 0.8,
+        "remarkable": 0.7,
+        "impressive": 0.7,
+        "stunning": 0.8,
+        "breathtaking": 0.9,
+        "extraordinary": 0.9
+      }
+    },
+    
+    "satisfaction": {
+      "words": {
+        "good": 0.5,
+        "great": 0.7,
+        "excellent": 0.8,
+        "perfect": 1.0,
+        "satisfying": 0.6,
+        "pleasing": 0.6,
+        "favorable": 0.5,
+        "positive": 0.6,
+        "successful": 0.7,
+        "accomplished": 0.7,
+        "fulfilled": 0.7,
+        "content": 0.5,
+        "pleased": 0.6
+      }
+    },
+    
+    "excitement": {
+      "words": {
+        "exciting": 0.8,
+        "thrilling": 0.9,
+        "exhilarating": 0.9,
+        "stimulating": 0.7,
+        "invigorating": 0.7,
+        "energizing": 0.7,
+        "electrifying": 0.9,
+        "dynamic": 0.6,
+        "vibrant": 0.7,
+        "lively": 0.6
+      }
+    }
+  },
+  
+  "negative_emotions": {
+    "sadness": {
+      "words": {
+        "sad": -0.6,
+        "unhappy": -0.6,
+        "depressed": -0.8,
+        "miserable": -0.9,
+        "heartbroken": -0.9,
+        "devastated": -1.0,
+        "crushed": -0.8,
+        "dejected": -0.7,
+        "despondent": -0.8,
+        "melancholy": -0.6,
+        "sorrowful": -0.7,
+        "mournful": -0.7,
+        "grief": -0.8,
+        "despair": -0.9,
+        "anguish": -0.9
+      }
+    },
+    
+    "anger": {
+      "words": {
+        "angry": -0.7,
+        "mad": -0.7,
+        "furious": -0.9,
+        "enraged": -1.0,
+        "livid": -0.9,
+        "irate": -0.8,
+        "outraged": -0.9,
+        "incensed": -0.8,
+        "infuriated": -0.9,
+        "wrathful": -0.9,
+        "indignant": -0.7,
+        "annoyed": -0.5,
+        "irritated": -0.5,
+        "frustrated": -0.6,
+        "aggravated": -0.6,
+        "vexed": -0.5
+      }
+    },
+    
+    "fear": {
+      "words": {
+        "scared": -0.6,
+        "afraid": -0.6,
+        "frightened": -0.7,
+        "terrified": -0.9,
+        "horrified": -0.9,
+        "petrified": -0.8,
+        "alarmed": -0.6,
+        "anxious": -0.6,
+        "worried": -0.5,
+        "nervous": -0.5,
+        "uneasy": -0.4,
+        "apprehensive": -0.5,
+        "panicked": -0.8,
+        "dread": -0.7,
+        "terror": -0.9
+      }
+    },
+    
+    "disgust": {
+      "words": {
+        "disgusting": -1.0,
+        "revolting": -1.0,
+        "repulsive": -1.0,
+        "nauseating": -0.9,
+        "sickening": -0.9,
+        "gross": -0.7,
+        "vile": -0.9,
+        "foul": -0.8,
+        "hideous": -0.9,
+        "repugnant": -0.9,
+        "abhorrent": -0.9,
+        "loathsome": -0.9,
+        "detestable": -0.8,
+        "offensive": -0.6,
+        "distasteful": -0.6
+      }
+    },
+    
+    "disappointment": {
+      "words": {
+        "disappointed": -0.6,
+        "disappointing": -0.6,
+        "letdown": -0.6,
+        "underwhelming": -0.5,
+        "unsatisfactory": -0.7,
+        "inadequate": -0.6,
+        "insufficient": -0.5,
+        "subpar": -0.6,
+        "mediocre": -0.4,
+        "poor": -0.5,
+        "bad": -0.5,
+        "terrible": -0.9,
+        "awful": -0.9,
+        "horrible": -0.9,
+        "dreadful": -0.9,
+        "atrocious": -0.9
+      }
+    },
+    
+    "hate": {
+      "words": {
+        "hate": -0.8,
+        "despise": -0.9,
+        "loathe": -1.0,
+        "detest": -0.9,
+        "abhor": -0.9,
+        "dislike": -0.5,
+        "resent": -0.6,
+        "scorn": -0.7,
+        "contempt": -0.8,
+        "disdain": -0.7
+      }
+    }
+  },
+  
+  "intensifiers": {
+    "high_intensity": {
+      "extremely": 2.0,
+      "incredibly": 1.8,
+      "absolutely": 1.7,
+      "utterly": 1.8,
+      "completely": 1.6,
+      "totally": 1.5,
+      "tremendously": 1.8,
+      "exceptionally": 1.7,
+      "extraordinarily": 1.9,
+      "immensely": 1.7,
+      "enormously": 1.7,
+      "vastly": 1.6
+    },
+    
+    "medium_intensity": {
+      "very": 1.5,
+      "really": 1.3,
+      "quite": 1.2,
+      "truly": 1.4,
+      "genuinely": 1.3,
+      "seriously": 1.4,
+      "particularly": 1.3,
+      "especially": 1.4,
+      "notably": 1.2,
+      "remarkably": 1.6,
+      "considerably": 1.4,
+      "substantially": 1.5
+    },
+    
+    "certainty_intensifiers": {
+      "definitely": 1.2,
+      "certainly": 1.2,
+      "surely": 1.2,
+      "indeed": 1.1,
+      "undoubtedly": 1.3,
+      "clearly": 1.1,
+      "obviously": 1.2,
+      "evidently": 1.1
+    }
+  },
+  
+  "diminishers": {
+    "mild_diminishers": {
+      "slightly": 0.5,
+      "somewhat": 0.6,
+      "rather": 0.7,
+      "fairly": 0.7,
+      "pretty": 0.8,
+      "relatively": 0.7,
+      "moderately": 0.6,
+      "reasonably": 0.7
+    },
+    
+    "strong_diminishers": {
+      "barely": 0.3,
+      "hardly": 0.3,
+      "scarcely": 0.3,
+      "just": 0.5,
+      "only": 0.5,
+      "merely": 0.4,
+      "simply": 0.6
+    },
+    
+    "uncertainty_diminishers": {
+      "kind": 0.6,
+      "sort": 0.6,
+      "little": 0.5,
+      "bit": 0.5,
+      "almost": 0.8,
+      "nearly": 0.8,
+      "practically": 0.9,
+      "essentially": 0.8
+    }
+  },
+  
+  "negators": [
+    "not", "no", "never", "none", "nothing", "nowhere", "nobody", "neither",
+    "don't", "doesn't", "didn't", "won't", "wouldn't", "can't", "couldn't",
+    "shouldn't", "mustn't", "haven't", "hasn't", "hadn't", "isn't", "aren't",
+    "wasn't", "weren't", "without", "lack", "absent", "missing", "void"
+  ],
+  
+  "emoticons": {
+    "positive": [
+      ":)", ":-)", ":D", ":-D", ":P", ":-P", ";)", ";-)", ":3", "=)", "=D",
+      "😀", "😃", "😄", "😁", "😆", "😅", "🤣", "😂", "🙂", "😊", "😇", "🥰",
+      "😍", "🤩", "😘", "😗", "😚", "😙", "😋", "😛", "😜", "🤪", "😝", "🤗",
+      "🤭", "😏", "😌", "😎", "🤓", "🥳", "😈", "👍", "👌", "✌️", "🤞", "🤟",
+      "🤘", "👏", "🙌", "👐", "🤲", "💪", "❤️", "🧡", "💛", "💚", "💙", "💜",
+      "🖤", "🤍", "🤎", "💔", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝",
+      "💟", "☮️", "✝️", "☪️", "🕉️", "☸️", "✡️", "🔯", "🕎", "☯️", "☦️", "🛐",
+      "⛎", "♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓", "🎉",
+      "🎊", "🎁", "🎈", "🎂", "🎀", "🎗️", "🏆", "🏅", "🥇", "🥈", "🥉", "⭐",
+      "🌟", "💫", "⚡", "💥", "💢", "💨", "💦", "💤", "🔥", "✨", "🌈", "☀️"
+    ],
+    
+    "negative": [
+      ":(", ":-(", ":'(", ">:(", "D:", ":|", ":-|", "=/", ":-/", ":\\", ":-\\",
+      "😐", "😑", "😶", "😒", "🙄", "😬", "🤐", "🤨", "😕", "😟", "🙁", "☹️",
+      "😮", "😯", "😲", "😳", "🥺", "😦", "😧", "😨", "😰", "😥", "😢", "😭",
+      "😱", "😖", "😣", "😞", "😓", "😩", "😫", "😤", "😡", "😠", "🤬", "😈",
+      "👿", "💀", "☠️", "💩", "🤡", "👹", "👺", "👻", "👽", "👾", "🤖", "😺",
+      "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🤲", "👎", "👊", "✊",
+      "🤛", "🤜", "🤞", "✌️", "🤟", "🤘", "👌", "🤏", "✋", "🤚", "🖐️", "🖖",
+      "💔", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "💟", "☮️", "⚰️",
+      "🪦", "⚱️", "🗿", "🪨", "🕳️", "💣", "🔪", "🗡️", "⚔️", "🛡️", "🔫", "🏹"
+    ],
+    
+    "neutral": [
+      ":|", ":-|", "😐", "😑", "😶", "🤔", "🧐", "🤓", "😮", "😯", "😲", "😳",
+      "🤐", "🤨", "🙄", "😬", "🤥", "😪", "😴", "😵", "🤒", "🤕", "🤢", "🤮",
+      "🤧", "🥵", "🥶", "🥴", "😵‍💫", "🤯", "🤠", "🥳", "😎", "🤓", "🧐"
+    ]
+  },
+  
+  "context_modifiers": {
+    "temporal_indicators": {
+      "future": ["will", "going to", "gonna", "tomorrow", "next", "later", "soon", "eventually"],
+      "past": ["was", "were", "did", "had", "used to", "yesterday", "ago", "before", "previously"],
+      "present": ["is", "are", "am", "currently", "now", "today", "presently", "at the moment"]
+    },
+    
+    "certainty_indicators": {
+      "high_certainty": ["definitely", "certainly", "absolutely", "sure", "confident", "positive", "convinced"],
+      "low_certainty": ["maybe", "perhaps", "possibly", "might", "could", "uncertain", "doubtful", "unsure"]
+    },
+    
+    "social_context": {
+      "personal": ["I", "me", "my", "myself", "personally", "in my opinion"],
+      "social": ["we", "us", "our", "together", "team", "group", "everyone", "people"],
+      "universal": ["everyone", "nobody", "anyone", "someone", "all", "none", "every"]
+    },
+    
+    "comparison_words": {
+      "positive_comparison": ["better", "best", "superior", "greater", "more", "most", "higher", "top"],
+      "negative_comparison": ["worse", "worst", "inferior", "lesser", "less", "least", "lower", "bottom"],
+      "neutral_comparison": ["similar", "same", "equal", "equivalent", "comparable", "like", "as"]
+    }
+  },
+  
+  "domain_specific": {
+    "product_reviews": {
+      "positive": {
+        "quality": ["high-quality", "well-made", "durable", "sturdy", "solid", "premium", "top-notch"],
+        "value": ["worth it", "great value", "affordable", "reasonable", "cost-effective", "budget-friendly"],
+        "service": ["helpful", "friendly", "professional", "courteous", "responsive", "efficient"],
+        "delivery": ["fast", "quick", "prompt", "timely", "speedy", "rapid", "immediate"]
+      },
+      "negative": {
+        "quality": ["poor quality", "cheaply made", "flimsy", "fragile", "broken", "defective", "faulty"],
+        "value": ["overpriced", "expensive", "costly", "not worth it", "waste of money", "rip-off"],
+        "service": ["rude", "unhelpful", "unprofessional", "slow", "unresponsive", "incompetent"],
+        "delivery": ["slow", "delayed", "late", "never arrived", "missing", "damaged", "lost"]
+      }
+    },
+    
+    "movie_reviews": {
+      "positive": {
+        "plot": ["engaging", "captivating", "compelling", "interesting", "gripping", "fascinating"],
+        "acting": ["brilliant", "convincing", "natural", "powerful", "moving", "authentic"],
+        "visuals": ["stunning", "beautiful", "spectacular", "impressive", "breathtaking", "gorgeous"],
+        "overall": ["masterpiece", "classic", "must-see", "recommended", "enjoyable", "entertaining"]
+      },
+      "negative": {
+        "plot": ["boring", "predictable", "confusing", "nonsensical", "weak", "uninteresting"],
+        "acting": ["terrible", "wooden", "unconvincing", "over-acting", "poor", "awkward"],
+        "visuals": ["ugly", "cheap", "poorly made", "low-budget", "amateurish", "disappointing"],
+        "overall": ["waste of time", "awful", "terrible", "boring", "disappointing", "avoid"]
+      }
+    },
+    
+    "restaurant_reviews": {
+      "positive": {
+        "food": ["delicious", "tasty", "flavorful", "fresh", "amazing", "perfect", "incredible"],
+        "service": ["attentive", "friendly", "professional", "quick", "excellent", "outstanding"],
+        "atmosphere": ["cozy", "elegant", "romantic", "lively", "pleasant", "inviting", "charming"],
+        "value": ["reasonable", "affordable", "worth it", "great value", "fair price"]
+      },
+      "negative": {
+        "food": ["tasteless", "bland", "overcooked", "undercooked", "stale", "disgusting", "awful"],
+        "service": ["slow", "rude", "inattentive", "unprofessional", "terrible", "horrible"],
+        "atmosphere": ["noisy", "cramped", "dirty", "uncomfortable", "unpleasant", "depressing"],
+        "value": ["overpriced", "expensive", "not worth it", "rip-off", "too costly"]
+      }
+    }
+  },
+  
+  "educational_examples": {
+    "easy_positive": [
+      "I love ice cream!",
+      "This is amazing!",
+      "Great job!",
+      "I'm so happy!",
+      "Perfect day! 😊",
+      "Awesome movie!",
+      "I feel wonderful!",
+      "Best pizza ever!"
+    ],
+    
+    "easy_negative": [
+      "I hate this!",
+      "This is terrible!",
+      "I'm so sad 😢",
+      "Worst day ever!",
+      "I feel awful!",
+      "This movie is boring!",
+      "I'm really angry!",
+      "This food is disgusting!"
+    ],
+    
+    "easy_neutral": [
+      "The library opens at 9 AM.",
+      "It's raining today.",
+      "I have a meeting tomorrow.",
+      "The store closes at 6 PM.",
+      "There are 5 apples on the table.",
+      "The bus arrives in 10 minutes.",
+      "Please submit your report by Friday.",
+      "The temperature is 72 degrees."
+    ],
+    
+    "medium_difficulty": [
+      "I suppose it's not terrible, just not great either.",
+      "The food was okay, but the service could be better.",
+      "I'm not unhappy with the results.",
+      "It's pretty good, though not perfect.",
+      "The movie was somewhat entertaining.",
+      "I guess I'm satisfied with the outcome."
+    ],
+    
+    "hard_difficulty": [
+      "The apparent success masks underlying issues.",
+      "His smile didn't quite reach his eyes.",
+      "The silence was deafening.",
+      "It's the best of the worst options available.",
+      "I couldn't be more disappointed.",
+      "The irony was not lost on me."
+    ],
+    
+    "mixed_sentiment": [
+      "Great food but terrible service.",
+      "I love the design, but it's too expensive.",
+      "The movie started well but ended poorly.",
+      "Beautiful location, awful weather.",
+      "Excellent product, slow delivery.",
+      "Amazing concept, poor execution."
+    ]
+  },
+  
+  "cultural_variations": {
+    "informal_slang": {
+      "positive": {
+        "awesome": 0.8, "cool": 0.6, "sweet": 0.7, "sick": 0.8, "dope": 0.8,
+        "lit": 0.8, "fire": 0.9, "bomb": 0.8, "tight": 0.7, "fresh": 0.7,
+        "rad": 0.7, "wicked": 0.8, "mint": 0.7, "ace": 0.8, "boss": 0.7
+      },
+      "negative": {
+        "sucks": -0.7, "lame": -0.5, "wack": -0.6, "trash": -0.8, "garbage": -0.8,
+        "basic": -0.4, "weak": -0.5, "bogus": -0.6, "whack": -0.6, "bunk": -0.6
+      }
+    },
+    
+    "generational_terms": {
+      "gen_z": {
+        "positive": {"slay": 0.8, "periodt": 0.7, "no cap": 0.6, "bet": 0.5, "fire": 0.9},
+        "negative": {"mid": -0.4, "cringe": -0.6, "sus": -0.5, "cap": -0.5}
+      },
+      "millennial": {
+        "positive": {"goals": 0.7, "vibes": 0.6, "mood": 0.5, "yasss": 0.8},
+        "negative": {"basic": -0.4, "meh": -0.3, "ugh": -0.5}
+      }
+    }
+  },
+  
+  "punctuation_patterns": {
+    "excitement_indicators": ["!", "!!", "!!!", "!?", "?!"],
+    "uncertainty_indicators": ["?", "??", "???", "..."],
+    "emphasis_patterns": ["ALL CAPS", "**bold**", "*italics*", "REPEATED LETTERS"],
+    "emotional_spacing": ["extra   spaces", "no spaces", "w o r d  s p a c i n g"]
+  },
+  
+  "sentence_patterns": {
+    "positive_structures": [
+      "I love [noun]",
+      "This is [positive_adjective]",
+      "[noun] is amazing",
+      "So [positive_adjective]!",
+      "Best [noun] ever!"
+    ],
+    "negative_structures": [
+      "I hate [noun]",
+      "This is [negative_adjective]",
+      "[noun] is terrible",
+      "So [negative_adjective]!",
+      "Worst [noun] ever!"
+    ],
+    "neutral_structures": [
+      "The [noun] is [descriptive_adjective]",
+      "[event] happens at [time]",
+      "There are [number] [noun]",
+      "[instruction] by [deadline]"
+    ]
+  }
+}
