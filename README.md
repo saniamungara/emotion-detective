@@ -2,72 +2,79 @@
 
 An Interactive Sentiment Analysis Learning Platform for 6th Grade Students
 
-Transform complex AI concepts into engaging, story-driven learning experiences! This web app teaches sentiment analysis through detective stories, interactive algorithms, and gamified exercises.
+This web app teaches sentiment analysis through detective stories, multiple AI algorithms, and gamified exercises.
 
 🎯 Project Overview
 
-The AI Emotion Detective Academy helps young students learn how computers can understand emotions in text.
-Through fun stories featuring Detective Senti and AI Assistant Ana, kids explore happiness, sadness, and neutral emotions in a simple, playful way.
-
-Why this project?
-
-Makes AI concepts simple for young learners
-
-Encourages interactive learning through practice
-
-Uses gamification (badges, scores, challenges) to keep engagement high
-
-Shows real-world use cases (social media, reviews, communication)
+The AI Emotion Detective Academy helps 6th-grade students learn how computers understand emotions in text. Through engaging stories with Detective Senti and AI Assistant Ana, students explore happiness, sadness, and neutral detection in writing.
 
 ✨ Key Features
 
-📖 Story-driven learning with characters & chapters
+Story-Driven Learning: Detective Senti + AI Ana, chapter-based progression
 
-🧮 Multiple algorithms (word-list, patterns, ensemble simulation)
+Multiple Algorithms: Lexicon-based, pattern recognition, neural simulation
 
-📊 Visualizations: word clouds, pie charts, confidence meters
+Visualizations: Word clouds, pie charts, confidence meters, animated bars
 
-🎮 Interactive elements: real-time analysis, quizzes, exercises
+Gamification: Real-time analysis, challenges, badges, quizzes
 
-🎨 Kid-friendly UI/UX: responsive, colorful, easy navigation
+Modern UI/UX: Glassmorphism, animations, responsive design
 
 🏗️ Tech Stack
 
-HTML5, CSS3, JavaScript (no frameworks – lightweight)
+Frontend: HTML5, CSS3, Vanilla JavaScript
 
-Chart.js for data visualizations
+Libraries: Chart.js, Anime.js
 
-Anime.js for animations
+Structure:
+
+emotion-detective-academy/
+├── index.html
+├── css/styles.css
+├── js/algorithms.js
+├── js/animations.js
+├── js/main.js
+├── assets/data/lexicon.json
+└── README.md
 
 🚀 Getting Started
 Quick Setup
 
-Clone the repo:
-
-git clone https://github.com/your-username/emotion-detective.git
-cd emotion-detective
-
+Clone or download this repository
 
 Open index.html in your browser
 
-Explore the story, try exercises, and test the sentiment analyzer
+Explore Home → Analyzer → Learning → Playground
 
-🎓 Learning Objectives
+Development (Optional)
+git clone https://github.com/your-username/emotion-detective-academy.git
+cd emotion-detective-academy
+python -m http.server 8000
 
-By the end, students will:
+🎓 Learning Goals
 
-Understand what sentiment analysis is
+Students will learn:
 
-Learn how computers detect emotions in text
+Basics of sentiment analysis
 
-See real-world applications (reviews, social media, communication)
+How word lists, punctuation, and patterns affect emotion detection
 
-Practice with interactive exercises and challenges
+Real-world uses in social media, reviews, communication
 
-🚀 Deployment
+Simple AI and machine learning ideas
 
-This project can be hosted easily:
+🔧 Algorithms
 
-GitHub Pages (used for this submission)
+Lexicon Analyzer – word-list with negation & intensifiers
 
-Or Netlify / Vercel (optional alternatives)
+Pattern Analyzer – punctuation, capitalization, emojis, repetition
+
+Neural Simulator – combines multiple approaches with confidence scoring
+
+🚀 Deployment Options
+
+GitHub Pages → Free hosting via repository settings
+
+Netlify / Vercel → Drag & drop or import from GitHub
+
+Local → Run with Python/Node/PHP simple servers
